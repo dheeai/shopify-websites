@@ -187,3 +187,14 @@ header nav{gap:24px}.page-title{padding:54px max(5%,calc((100vw - 1280px)/2)) 42
 .colour-section.colour-in-view::before{opacity:.75;animation-play-state:running}
 @keyframes section-colour-drift{from{background-position:0% 0%,100% 100%}to{background-position:100% 50%,0% 30%}}
 @media(prefers-reduced-motion:reduce){.colour-section::before{animation:none;transition:none;opacity:.55}}
+
+/* Shared homepage alignment and full-bleed colour transitions. */
+:root{--home-gutter:max(6vw,calc((100vw - 1400px)/2 + 6vw))}
+.ambient-content{max-width:none;padding-left:var(--home-gutter);padding-right:var(--home-gutter)}
+.ambient-controls{left:var(--home-gutter);right:var(--home-gutter)}
+.plain-section{max-width:none;width:100%;margin:0;padding-left:var(--home-gutter);padding-right:var(--home-gutter)}
+.colour-section.section-revealed> :not(.story-hero):not(.help-sidebar):not(.look-photo){animation:section-reveal .8s cubic-bezier(.22,1,.36,1) both}
+.colour-section.section-revealed> :nth-child(2){animation-delay:.1s}
+@keyframes section-reveal{from{opacity:.35;translate:0 18px}to{opacity:1;translate:0 0}}
+@media(max-width:700px){:root{--home-gutter:27px}.plain-section{margin:0;padding:42px var(--home-gutter)}}
+@media(prefers-reduced-motion:reduce){.colour-section.section-revealed> :not(.story-hero):not(.help-sidebar):not(.look-photo){animation:none}}

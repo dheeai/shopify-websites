@@ -73,7 +73,7 @@ function initSectionColour(){
   const route=(location.hash||'#/').split('/')[1]||'home';
   const offsets={home:0,collection:1,product:2,look:3,story:4,care:1,contact:2,privacy:4,cart:0};
   const sections=[...document.querySelectorAll('#main > section:not(.ambient-hero), #main > .page-title, #main > .story-layout, #main > .information-layout, footer')];
-  sectionColourObserver=new IntersectionObserver(entries=>{for(const entry of entries)entry.target.classList.toggle('colour-in-view',entry.isIntersecting)},{threshold:0,rootMargin:'-8% 0px -8% 0px'});
+  sectionColourObserver=new IntersectionObserver(entries=>{for(const entry of entries){entry.target.classList.toggle('colour-in-view',entry.isIntersecting);if(entry.isIntersecting)entry.target.classList.add('section-revealed')}},{threshold:0,rootMargin:'-8% 0px -8% 0px'});
   sections.forEach((section,i)=>{section.classList.add('colour-section');section.dataset.colour=String((i+(offsets[route]||0))%5);sectionColourObserver.observe(section)});
 }
 window.addEventListener('hashchange',render);persist();render();
