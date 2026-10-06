@@ -41,6 +41,19 @@ A furniture and interiors storefront with bold typography, original room photogr
 - Daylight/evening scenes and a rotatable furniture footprint tool.
 - Responsive layouts, keyboard controls, and reduced-motion support.
 
+## SONDR
+
+A modern technology storefront with original interactive 3D products.
+
+**[Visit SONDR](https://dheeai.github.io/shopify-websites/samples/sondr/)**
+
+- Five devices across speakers, personal audio, and charging.
+- Rotatable 3D models with Silver, Graphite, and Cobalt finishes.
+- An exploded construction view and speaker comparison.
+- Collection filters, product details, and compatible accessory bundles.
+- A persistent shopping bag with quantity controls.
+- Responsive layouts, keyboard controls, and reduced-motion support.
+
 ## Local preview
 
 No installation or build step is required.
@@ -49,7 +62,7 @@ No installation or build step is required.
 python3 -m http.server 8080
 ```
 
-Open `http://localhost:8080/` to visit Atelier Noma, `http://localhost:8080/samples/serein/` for Serein, or `http://localhost:8080/samples/contour/` for Contour.
+Open `http://localhost:8080/` to visit Atelier Noma, `http://localhost:8080/samples/serein/` for Serein, `http://localhost:8080/samples/contour/` for Contour, or `http://localhost:8080/samples/sondr/` for SONDR.
 
 ### Project structure
 
@@ -61,4 +74,4 @@ GitHub Pages publishes from `main` at the repository root. The root URL opens At
 
 This is a static storefront sample. Shopping bags and saved pieces use browser storage. Shopify checkout, payments, inventory, and email services are not connected.
 
-Product imagery was generated for the sample. Typography uses Bodoni Moda and Manrope for Atelier Noma, DM Sans for Serein, and Manrope for Contour, from Google Fonts.
+Product imagery was generated for the samples; SONDR uses original 3D geometry. Typography uses Bodoni Moda and Manrope for Atelier Noma, DM Sans for Serein, Manrope for Contour, and Space Grotesk, DM Sans, and IBM Plex Mono for SONDR, from Google Fonts.
