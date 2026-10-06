@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {normalize,total,add,normalizeBoards,roomLines} from './src/state.mjs';
+assert.deepEqual(normalize(null),[]);
+assert.deepEqual(normalize([{id:'nope',qty:3},{id:'arc-sofa-standard',qty:Infinity}]),[]);
+assert.deepEqual(normalize([{id:'cove-chair-standard',qty:2},{id:'cove-chair-standard',qty:3}]),[{id:'cove-chair-standard',qty:5}]);
+assert.equal(normalize([{id:'line-chair-standard',qty:999}])[0].qty,20);
+assert.equal(total([{id:'plane-table-oak',qty:1},{id:'weave-cushion-standard',qty:2}]),105600);
+assert.equal(add([],[{id:'line-chair-standard',qty:4}])[0].qty,4);
+assert.equal(normalizeBoards([{id:'a',name:' ',lines:[{id:'no',qty:1}]}])[0].name,'My room');
+assert.equal(normalizeBoards({bad:1}).length,0);
+assert.equal(roomLines('dining').find(l=>l.id==='line-chair-standard').qty,4);
+assert.equal(normalize([{id:'cove-chair-standard',qty:1},{id:'cove-chair-ivory',qty:1}]).length,2);
+console.log('10 state and pricing checks passed.');
