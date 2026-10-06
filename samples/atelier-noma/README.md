@@ -1,8 +1,8 @@
 # Atelier Noma · Sample 01
 
-A contemporary fashion storefront by Dhee, featuring women’s and men’s collections in one editorial experience.
+A contemporary fashion storefront, featuring women’s and men’s collections in one editorial experience.
 
-**[Open the live storefront](https://dheeai.github.io/shopify-websites/samples/atelier-noma/)** · [Development history](../../docs/atelier-noma-history.md)
+**[Open the live storefront](https://dheeai.github.io/shopify-websites/samples/atelier-noma/)**
 
 ## Features
 
