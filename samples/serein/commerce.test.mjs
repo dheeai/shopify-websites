@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {cleanCart,total,addLines,routine} from './commerce.js';
+assert.deepEqual(cleanCart(null),[]);
+assert.deepEqual(cleanCart([{id:'missing',qty:1},{id:'gel-50',qty:-1},{id:'gel-50',qty:'bad'}]),[]);
+assert.deepEqual(cleanCart([{id:'gel-50',qty:2},{id:'gel-50',qty:3}]),[{id:'gel-50',qty:5}]);
+assert.equal(total([{id:'gel-15',qty:2},{id:'lip-12',qty:1}]),5000);
+assert.deepEqual(addLines([],['gel-15','gel-15']),[{id:'gel-15',qty:2}]);
+assert.equal(cleanCart([{id:'gel-50',qty:Infinity}]).length,0);
+assert.equal(cleanCart([{id:'gel-50',qty:200}])[0].qty,20);
+assert.deepEqual(routine({scope:'face',texture:'rich',steps:'3'}),['cleanser-150','serum-30','rich-50']);
+assert.deepEqual(routine({scope:'travel',texture:'rich'}),['rich-15','lip-12']);
+assert.deepEqual(routine({scope:'body'}),['body-250','lip-12']);
+console.log('10 commerce checks passed: malformed storage, duplicate lines, limits, exact variant totals, and preference-dependent routines.');

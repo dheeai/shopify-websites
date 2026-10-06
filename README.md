@@ -17,7 +17,18 @@ A contemporary fashion storefront for women and men, with editorial photography,
 - Animated homepage photography and subtle scroll transitions.
 - Mobile layouts, keyboard controls, and reduced-motion support.
 
-### Local preview
+## Serein
+
+A skincare storefront with original product imagery, warm colours, and a guided routine builder.
+
+**[Visit Serein](https://dheeai.github.io/shopify-websites/samples/serein/)**
+
+- Eight skincare products and three curated sets.
+- Category and texture filters, live search, and size selection.
+- Adjustable routines, saved products, and a persistent shopping bag.
+- Animated campaign imagery, scroll reveals, and responsive layouts.
+
+## Local preview
 
 No installation or build step is required.
 
@@ -25,7 +36,7 @@ No installation or build step is required.
 python3 -m http.server 8080
 ```
 
-Open `http://localhost:8080/` to visit Atelier Noma.
+Open `http://localhost:8080/` to visit Atelier Noma, or `http://localhost:8080/samples/serein/` for Serein.
 
 ### Project structure
 
@@ -37,4 +48,4 @@ GitHub Pages publishes from `main` at the repository root. The root URL opens At
 
 This is a static storefront sample. Shopping bags and saved pieces use browser storage. Shopify checkout, payments, inventory, and email services are not connected.
 
-Product imagery was generated for the sample. Typography uses Bodoni Moda and Manrope from Google Fonts.
+Product imagery was generated for the sample. Typography uses Bodoni Moda and Manrope for Atelier Noma, and DM Sans for Serein, from Google Fonts.
